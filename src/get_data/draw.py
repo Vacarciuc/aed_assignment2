@@ -26,3 +26,16 @@ def draw_scatter_plot(data):
     plt.legend()
     plt.grid(True)
     plt.show()
+
+
+def plot_two_lines(data, col1, col2, title="Compararea a două variabile"):
+    plt.figure(figsize=(10, 6))
+    plt.plot(data['Time'], data[col1], label=col1, color='blue', linewidth=2)
+    plt.plot(data['Time'], data[col2], label=col2, color='orange', linewidth=2)
+
+    plt.title(title)
+    plt.xlabel("Timp")
+    plt.ylabel("Valoare")
+    plt.legend()
+    plt.grid(True)
+    plt.show()

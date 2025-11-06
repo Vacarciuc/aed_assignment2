@@ -7,6 +7,7 @@ import pandas as pd
 from model.linear_regression import get_linear_regression
 from model.non_linear_regression import non_linear_regression
 from model.polynomial import get_polynomial_regression
+from get_data.draw import plot_two_lines
 
 
 def main(dataset: Dataset):
@@ -46,10 +47,11 @@ def main(dataset: Dataset):
     quarterly_data.dropna(inplace=True)
     draw_heat_map(quarterly_data)
     data_zero = get_zero_code(data)
+    plot_two_lines(data_zero, 'earn_nt_net', 'nama_10_lp_ulc')
     draw_scatter_plot(data_zero)
     get_linear_regression(quarterly_data, predictors, predict)
     non_linear_regression(quarterly_data, predictors, predict)
     get_polynomial_regression(quarterly_data, predictors, predict)
 
 if __name__ == "__main__":
-    main(Dataset.FIRST)
+    main(Dataset.THIRD)
