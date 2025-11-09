@@ -1,4 +1,3 @@
-import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
@@ -34,3 +33,4 @@ def get_linear_regression(data, predictors, predict):
     sns.histplot(residuals, kde=True)
     plt.title("Residuals linear regression")
     plt.show()
+    return y_test, y_pred,

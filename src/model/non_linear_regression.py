@@ -51,7 +51,6 @@ def non_linear_regression(data, predictors, predict):
     plt.title("Residuals non-linear regression")
     plt.show()
 
-    return popt
+    return y_test, y_pred
 
-# Apelarea funcției cu datele tale
-# regresie_non_liniara(data)
+

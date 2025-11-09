@@ -42,6 +42,6 @@ def get_polynomial_regression(data, predictors, predict, degree=2):
     sns.histplot(residuals, kde=True)
     plt.title("Residuals polynomial")
     plt.show()
+    return y_test, y_pred
 
-# Apelarea funcției
-# get_polynomial_regression(data)
+

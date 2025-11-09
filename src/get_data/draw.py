@@ -39,3 +39,18 @@ def plot_two_lines(data, col1, col2, title="Compararea a două variabile"):
     plt.legend()
     plt.grid(True)
     plt.show()
+
+def plot_actual_vs_predicted(y_test, y_pred, title="Actual vs Predicted"):
+    plt.figure(figsize=(10, 6))
+    x_axis = y_test.index
+
+    plt.plot(x_axis, y_test.values, label="Actual", color='blue', linewidth=2)
+    plt.plot(x_axis, y_pred, label="Predicted", color='orange', linestyle='--', linewidth=2)
+
+    plt.title(title, fontsize=14)
+    plt.xlabel("Timp (trimestre)", fontsize=12)
+    plt.ylabel("Valoare PIB (milioane euro)", fontsize=12)
+    plt.legend()
+    plt.grid(True, linestyle='--', alpha=0.7)
+    plt.tight_layout()
+    plt.show()

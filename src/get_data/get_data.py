@@ -11,6 +11,7 @@ def read_file(
 ) -> pd.DataFrame:
     file_path = os.path.join(os.path.dirname(__file__), path)
     df = pd.read_excel(file_path, sheet_name="data", header=None)
+    #df = pd.read_excel("D:\\PROJECT\\Python\\aed_assignment2\\data\\dataset_1New.xlsx", sheet_name="data", header=None)
     df.columns = df.iloc[0]
     df = df.drop(0)
     # Setăm coloana 'Indicator' ca index și transpunem

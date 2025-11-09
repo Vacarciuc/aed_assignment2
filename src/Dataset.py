@@ -5,3 +5,4 @@ class Dataset(Enum):
     FIRST = 1
     SECOND = 2
     THIRD = 3
+    FIRST_NEW = 4
